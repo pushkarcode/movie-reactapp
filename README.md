@@ -21,10 +21,24 @@ Welcome to the React Movie App repository! This project combines the power of Re
   
 # Getting Started:
 
-* Clone the Repository:
-git clone https://github.com/your-username/react-movie-app.git
+1 Clone the Repository:
+git clone https://github.com/pushkarcode/movie-reactapp
 
-> Install Dependencies:
+2 Install Dependencies:
 
 * cd react-movie-app
 * npm install
+
+3 Get API Key:
+* Obtain an API key from The Movie Database (TMDb) and update it in the project.
+
+4 Run the App:
+* npm start
+
+# Issues and Support:
+If you encounter any issues or have suggestions, please open an issue. We appreciate your feedback!
+
+> Happy coding and movie browsing! 🎬🍿
+
+# Deployment Link:
+* https://movie-reactapp-henna.vercel.app/
