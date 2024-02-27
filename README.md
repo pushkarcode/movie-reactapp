@@ -2,10 +2,12 @@
 
 # React Movie App
 
-Welcome to the React Movie App repository! This project combines the power of React.js with Redux Toolkit for state management, Axios for seamless API integration, and Tailwind CSS for a sleek and responsive design. The goal is to create a feature-rich movie application with a smooth user experience.
+Welcome to the React Movie App repository! This project combines the power of React.js with Redux Toolkit for state management, Axios for seamless API integration, Tailwind CSS for a sleek design, and React Infinite Scrolling for a dynamic user experience. The goal is to create a feature-rich movie application with a smooth and endless browsing experience.
+
 
 # Features:
 
+* Infinite Scrolling: Dynamically load more movies as the user scrolls, providing a seamless browsing experience.
 * Movie Browser: Explore a vast collection of movies with a responsive and intuitive user interface.
 * Search Functionality: Easily search for your favorite movies using the powerful search feature.
 * Movie Details: Get comprehensive information about each movie, including cast, ratings, and synopsis.
@@ -18,6 +20,7 @@ Welcome to the React Movie App repository! This project combines the power of Re
 * Axios: HTTP client for making API requests seamlessly.
 * The Movie Database (TMDb) API: Fetch real-time movie data for an extensive movie catalog.
 * Tailwind CSS: A utility-first CSS framework for rapid and responsive web development.
+* React Infinite Scrolling: Enhance user experience by loading movies dynamically as the user scrolls.
   
 # Getting Started:
 
