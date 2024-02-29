@@ -44,12 +44,12 @@ const Home = () => {
   return wallpaper && trending ? (
     < >
       <Sidenav />
-      <div className="w-[80%] h-full overflow-auto overflow-x-hidden">
+      <div className="lg:w-[80%] w-full h-full overflow-auto overflow-x-hidden bg-[#1F1E24]">
         <Topnav />
         <Header data={wallpaper} />
 
-        <div className="flex items-center justify-between overflow-x-hidden">
-          <h1 className="text-[2.4vw] font-semibold tracking-wide   p-10 flex items-center gap-3 text-zinc-300">
+        <div className="flex items-center justify-between overflow-x-hidden p-2 lg:mt-0 mt-7 ">
+          <h1 className="lg:text-[2.4vw] text-[5.4vw] font-semibold tracking-wide lg:p-4  flex items-center gap-3 text-zinc-300">
             <IoMdTrendingUp className="text-[#6556CD]" /> Trends Now
           </h1>
           <Dropdown

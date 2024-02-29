@@ -49,24 +49,24 @@ useEffect(() => {
 
 return tv.length > 0 ? (
     <div className=" w-screen h-screen">
-      <div className="w-full h-[12vh] p-5 fixed backdrop-blur-sm flex items-center justify-between z-10">
-        <h1 className="text-[2.5vw] font-semibold  leading-none tracking-tight font-[gilroy] text-zinc-400 flex items-center gap-2">
+      <div className="w-full lg:h-[12vh] lg:p-5 p-4 py-5 fixed backdrop-blur-sm lg:flex items-center justify-between z-10">
+        <h1 className="lg:text-[3vw] text-[6vw] font-semibold  leading-none tracking-tight font-[gilroy] text-zinc-400 flex items-center lg:gap-2 gap-3">
           <i
             onClick={() => navigate(-1)}
-            className="ri-arrow-left-line  text-[2vw] hover:text-[#6556CD] transition-all"
+            className="ri-arrow-left-line lg:text-[2vw] hover:text-[#6556CD] transition-all"
           ></i>
           Tv Shows 
-          <small className="text-[1.2vw] ml-2 text-zinc-600">({category})</small>
+          <small className="lg:text-[1.2vw] ml-2 text-zinc-600">({category})</small>
         </h1>
 
-        <div className="flex items-center w-[75%]">
+        <div className="lg:flex lg:items-center lg:flex-nowrap lg:w-[75%] w-[100%]  flex items-center  -ml-12 ">
           <Topnav />
           <Dropdown
             title="Category"
             options={["on_the_air", "popular","top_rated","airing_today"]}
             func={(e) => setCategory(e.target.value)}
           />
-          <div className="w-[2%]"></div>
+       <div className="-mr-12"></div>
          
         </div>
       </div>
@@ -75,8 +75,7 @@ return tv.length > 0 ? (
         dataLength={tv.length}
         next={GetTv}
         hasMore={hasMore}
-        loader={<h1>Loading...</h1>}
-      >
+        loader={<h1 className="block bg-[#1F1E24] text-center text-[3vw] text-zinc-400 font-thin">Loading...</h1>}>
         <Cards data={tv} title="tv" />
       </InfiniteScroll>
     </div>

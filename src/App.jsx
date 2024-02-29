@@ -16,7 +16,7 @@ import Notfound from "./components/Notfound";
 
 const App = () => {
   return (
-    <div className="w-screen h-screen bg-[#1F1E24] flex">
+    <div className="lg:w-screen lg:h-screen w-screen h-screen  bg-[#1F1E24] lg:flex lg:justify-between">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trending" element={<Trending />} />

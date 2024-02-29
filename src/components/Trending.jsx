@@ -47,29 +47,34 @@ const Trending = () => {
   }, [category, duration]);
 
   return trending.length > 0 ? (
-    <div className="w-screen h-screen">
-      <div className="w-full h-[12vh] p-5 fixed backdrop-blur-sm flex items-center justify-between z-10">
-        <h1 className="text-[3vw] font-semibold  leading-none tracking-tight font-[gilroy] text-zinc-400 flex items-center gap-2">
+    <div className="lg:w-screen lg:h-screen">
+      <div className="w-full lg:h-[12vh] lg:p-5 p-4 py-5 fixed backdrop-blur-sm lg:flex items-center justify-between z-10">
+        <h1 className="lg:text-[3vw] text-[6vw] font-semibold  leading-none tracking-tight font-[gilroy] text-zinc-400 flex items-center lg:gap-2 gap-3">
           <i
             onClick={() => navigate(-1)}
-            className="ri-arrow-left-line text-[2vw] hover:text-[#6556CD] transition-all"
+            className="ri-arrow-left-line lg:text-[2vw] hover:text-[#6556CD] transition-all"
           ></i>
           Trending
         </h1>
 
-        <div className="flex items-center w-[75%] ">
+        <div className="lg:flex lg:items-center lg:flex-nowrap lg:w-[75%] w-[105%]  flex items-center -ml-12 ">
           <Topnav />
-          <Dropdown
+         <Dropdown
             title="Category"
             options={["movie", "tv", "all"]}
             func={(e) => setCategory(e.target.value)}
           />
-          <div className="w-[2%]"></div>
+        
+          <div className="lg:w-[2%] w-5"></div>
+          
+          
           <Dropdown
             title="Duration"
             options={["week", "day", "all"]}
             func={(e) => setDuration(e.target.value)}
           />
+          
+          
         </div>
       </div>
 
@@ -77,8 +82,7 @@ const Trending = () => {
         dataLength={trending.length}
         next={GetTrending}
         hasMore={hasMore}
-        loader={<h1>Loading...</h1>}
-      >
+        loader={<h1 className="block bg-[#1F1E24] text-center text-[3vw] text-zinc-400 font-thin">Loading...</h1>}>
         <Cards data={trending} title={category} />
       </InfiniteScroll>
     </div>

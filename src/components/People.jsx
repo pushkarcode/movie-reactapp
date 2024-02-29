@@ -47,10 +47,10 @@ const People = () => {
     <div
      className="w-[100vw] h-[100vh]">
       <div className="w-full h-[12vh] p-5 fixed backdrop-blur-sm flex items-center justify-between z-10 ">
-        <h1 className="text-[3vw] font-semibold  leading-none tracking-tight font-[gilroy] text-zinc-400 flex items-center gap-2">
+        <h1 className="lg:text-[3vw] text-[6.9vw] font-semibold  leading-none tracking-tight font-[gilroy] text-zinc-400 flex items-center gap-2">
           <i
             onClick={() => navigate(-1)}
-            className="ri-arrow-left-line  text-[2vw] hover:text-[#6556CD] transition-all"
+            className="ri-arrow-left-line  lg:text-[2vw] hover:text-[#6556CD] transition-all"
           ></i>
           People
           
@@ -64,7 +64,7 @@ const People = () => {
         dataLength={people.length}
         next={GetPeople}
         hasMore={hasMore}
-        loader={<h1>Loading...</h1>}>
+        loader={<h1 className="block bg-[#1F1E24] text-center text-[3vw] text-zinc-400 font-thin">Loading...</h1>}>
         <Cards data={people} title="person" />
       </InfiniteScroll>
      

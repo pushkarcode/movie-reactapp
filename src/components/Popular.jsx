@@ -13,14 +13,11 @@ const Popular = () => {
   const [popular, setpopular] = useState([]);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  document.title = "VECTOR | Pouplar "+category.toUpperCase();
-
+  document.title = "VECTOR | Pouplar " + category.toUpperCase();
 
   const GetPopular = async () => {
     try {
-      const { data } = await axios.get(
-        `${category}/popular?page=${page}`
-      );
+      const { data } = await axios.get(`${category}/popular?page=${page}`);
       // setpopular(data.results);
       if (data.results.length > 0) {
         setPage(page + 1);
@@ -49,24 +46,23 @@ const Popular = () => {
 
   return popular.length > 0 ? (
     <div className=" w-screen h-screen">
-      <div className="w-full h-[12vh] p-5 fixed backdrop-blur-sm flex items-center justify-between z-10">
-        <h1 className="text-[3vw] font-semibold  leading-none tracking-tight font-[gilroy] text-zinc-400 flex items-center gap-2">
+      <div className="w-full lg:h-[12vh] lg:p-5 p-4 py-5 fixed backdrop-blur-sm lg:flex items-center justify-between z-10">
+        <h1 className="lg:text-[3vw] text-[6vw] font-semibold  leading-none tracking-tight font-[gilroy] text-zinc-400 flex items-center lg:gap-2 gap-3">
           <i
             onClick={() => navigate(-1)}
-            className="ri-arrow-left-line text-[2vw] hover:text-[#6556CD] transition-all"
+            className="ri-arrow-left-line lg:text-[2vw] hover:text-[#6556CD] transition-all"
           ></i>
           Popular
         </h1>
 
-        <div className="flex items-center w-[75%]">
+        <div className="lg:flex lg:items-center lg:flex-nowrap lg:w-[75%] w-[100%]  flex items-center  -ml-12 ">
           <Topnav />
           <Dropdown
             title="Category"
             options={["movie", "tv"]}
             func={(e) => setCategory(e.target.value)}
           />
-          <div className="w-[2%]"></div>
-         
+          <div className="-mr-12"></div>
         </div>
       </div>
 
@@ -74,7 +70,11 @@ const Popular = () => {
         dataLength={popular.length}
         next={GetPopular}
         hasMore={hasMore}
-        loader={<h1>Loading...</h1>}
+        loader={
+          <h1 className="block bg-[#1F1E24] text-center text-[3vw] text-zinc-400 font-thin">
+            Loading...
+          </h1>
+        }
       >
         <Cards data={popular} title={category} />
       </InfiniteScroll>

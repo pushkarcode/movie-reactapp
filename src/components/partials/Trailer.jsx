@@ -14,7 +14,7 @@ const Trailer = () => {
     <div className="absolute top-0 left-0 z-[100] w-screen h-screen flex items-center justify-center bg-[rgba(0,0,0,.9)]">
      <Link
           onClick={() => navigate(-1)}
-          className="absolute text-white top-[5%] right-[2%] ri-close-fill text-[2vw] hover:text-[#aca7cd] transition-all"
+          className="absolute text-white top-[1%] right-[2%] ri-close-fill lg:text-[2vw] hover:text-[#aca7cd] transition-all text-[12vw]"
         ></Link>
      {ytvideo ? (
       <ReactPlayer 
