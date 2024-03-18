@@ -14,6 +14,7 @@ const Persondetails = () => {
   const navigate = useNavigate();
   const [category, setCategory] = useState("movie");
 
+  
   useEffect(() => {
     dispatch(asyncloadperson(id));
     return () => {
@@ -44,14 +45,14 @@ const Persondetails = () => {
           <div className="lg:text-[1.7vw] text-[5.5vw] text-zinc-300 flex lg:gap-x-7 gap-x-12 lg:pl-0 pl-2">
             <a
               target="_blank"
-              href={`https://en.wikipedia.org/wiki/${info.externalid.wikidata_id}`}
+              href={`https://en.wikipedia.org/wiki/ ${info.externalid.wikidata_id}/`}
             >
               <i className="hover:text-[#aca7cd] ri-earth-fill"></i>
             </a>
 
             <a
               target="_blank"
-              href={`https://www.facebook.com/ ${info.externalid.facebook_id}/`}
+              href={`https://www.facebook.com/${info.externalid.facebook_id}/`}
               className="hover:text-[#aca7cd]"
             >
               <i className="ri-facebook-circle-fill"></i>
